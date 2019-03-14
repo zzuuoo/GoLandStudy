@@ -10,5 +10,6 @@ import (
 
 func main() {
 	defer fmt.Println("我要退出前执行")
+	
 	os.Exit(2)
 }
