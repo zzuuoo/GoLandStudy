@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-//接口定义1111
+//接口定义
 type geometry interface {
 	area() float64
 	perim() float64
