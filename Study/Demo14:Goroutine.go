@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	runtime.GOMAXPROCS(1)
+	runtime.GOMAXPROCS(2)
 	var wg sync.WaitGroup
 	wg.Add(2)
 
@@ -16,24 +16,24 @@ func main() {
 		defer wg.Done()
 		for i:=0;i<3;i++{
 			for x := 'a';x < 'a'+26;x++{
-				fmt.Printf("%c",x)
+				fmt.Printf("%c ",x)
 			}
 		}
-		fmt.Println("char")
+		//fmt.Println("char")
 	}()
 	//fmt.Println()
 
 	go func() {
 		defer wg.Done()
 		for i:=0;i<3;i++{
-			for j:=0;j<10;j++{
-				fmt.Printf("%d",j)
+			for j:='A';j<'A'+26;j++{
+				fmt.Printf("%c ",j)
 			}
 		}
-		fmt.Println("num")
+		//fmt.Println("num")
 	}()
-	fmt.Println()
 	fmt.Println("等待协程完成")
 	wg.Wait()
+	fmt.Println()
 	fmt.Println("finished")
 }
