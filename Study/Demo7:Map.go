@@ -16,5 +16,17 @@ func main() {
 	if ok {
 		fmt.Println(v)
 	}
+
 	fmt.Println(ok,v)
+
+
+	typeMap := make(map[string]string)
+	typeMap["2"] = ""
+	a,b := typeMap["2"]
+	fmt.Println(a,b)
+	if a==""{
+		fmt.Println("a为空")
+	}
+
+
 }

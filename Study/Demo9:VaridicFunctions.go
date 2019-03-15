@@ -34,3 +34,6 @@ func main() {
 	//d2.D.Name
 
 }
+func OutFuncTest(){
+	fmt.Println("我是外部函数")
+}
